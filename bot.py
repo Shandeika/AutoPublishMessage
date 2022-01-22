@@ -15,7 +15,7 @@ bot = commands.Bot(command_prefix='ap.', help_command=None, intents=intents)
 @bot.event
 async def on_ready():
     print(f"Bot: {bot.user}")
-    await bot.change_presence(status=discord.Status.invisible)
+    await bot.change_presence(status=discord.Status.dnd, activity=discord.Activity(name="за публикациями", type=discord.ActivityType.watching))
 
 
 @bot.event

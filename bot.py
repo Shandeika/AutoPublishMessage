@@ -23,6 +23,7 @@ async def on_message(message):
     if isinstance(message.channel, discord.channel.TextChannel):
         if message.channel.type == discord.ChannelType.news:
             await message.publish()
+            await message.add_reaction("📢")
 
 
 bot.run(config["Config"]["token"])
